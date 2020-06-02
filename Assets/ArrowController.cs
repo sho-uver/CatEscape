@@ -26,6 +26,9 @@ public class ArrowController : MonoBehaviour {
 
         if (d < r1 + r2) {
             Destroy (gameObject);
+            GameObject director = GameObject.Find ("GameDirector");
+            director.GetComponent<GameDirector> ().DecreaseHp ();
         }
+
     }
 }
